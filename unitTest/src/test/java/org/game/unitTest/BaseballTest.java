@@ -1,33 +1,36 @@
 package org.game.unitTest;
 
 import org.game.baseball.Game;
+import org.junit.Before;
 import org.junit.Test;
 
 import junit.framework.Assert;
 
 public class BaseballTest {
+	Game game;
+
+	@Before
+	public void setUp() {
+		game = new Game();
+	}
 
 	@Test
 	public void shouldNullCheck() {
-		Game game = new Game();
-		try {
-			game.vaild(null);
-			Assert.fail();
-		}catch (IllegalArgumentException e) {
-			// TODO: handle exception
-		}
+		checkVaild(null);
 	}
-	
+
 	@Test
 	public void shouldCheckNumber() {
-		Game game = new Game();
+		checkVaild("1a2");
+	}
+
+	private void checkVaild(String input) {
 		try {
-			game.vaild("1a2");
+			game.vaild(input);
 			Assert.fail();
-		}catch (IllegalArgumentException e) {
+		} catch (IllegalArgumentException e) {
 			// TODO: handle exception
 		}
 	}
-	
-	
+
 }
