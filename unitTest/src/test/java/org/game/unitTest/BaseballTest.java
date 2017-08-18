@@ -28,6 +28,9 @@ public class BaseballTest {
 			baseball.inputNumber();
 		}while(!baseball.confirm());
 		baseball.printScore();
+		
+		// 테스트 단위가 잘못된거 같은데  ? 
+		// 영상좀 보고와야겟다 .. 
 	}
 
 }
