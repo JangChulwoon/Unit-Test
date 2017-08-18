@@ -2,10 +2,12 @@ package org.game.unitTest;
 
 import org.game.baseball.Game;
 import org.game.common.Vaild;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import junit.framework.Assert;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 public class BaseballTest {
 	Game game;
@@ -22,9 +24,15 @@ public class BaseballTest {
 			Vaild.checkVaild("1a2");
 			Vaild.checkVaild("112");
 			Assert.fail();
-		}catch (Exception e) {
+		} catch (Exception e) {
 		}
 	}
-	
+
+	@Test
+	public void endGame() {
+		Assert.assertThat(game.isSucess(), is(true));
+		Assert.assertThat(game.strike, is(3));
+		Assert.assertThat(game.ball, is(0));
+	}
 
 }
