@@ -1,7 +1,10 @@
 package org.game.unitTest;
 
 import org.game.baseball.Baseball;
+import org.game.ramdom.Random;
 import org.junit.Test;
+
+import junit.framework.Assert;
 
 public class BaseballTest {
 	
@@ -15,7 +18,7 @@ public class BaseballTest {
 	 * 3. 기회는 9번
 	 * 4. 모두다 맞으면 게임은 끝난다.  
 	 */
-	@Test
+/*	@Test
 	public void shouldBaseballTest() {
 		// 필요한 함수.
 		// 1. 숫자를 생성하는 함수.
@@ -29,8 +32,15 @@ public class BaseballTest {
 		}while(!baseball.confirm());
 		baseball.printScore();
 		
-		// 테스트 단위가 잘못된거 같은데  ? 
-		// 영상좀 보고와야겟다 .. 
+		// 문제점 1. 단위가 맞는지 모호함.
+		// 문제점 2. 개발하면서 계속 이렇게 짜는게 맞나 ? 라는 생각이 듬 .
+	}
+*/
+	@Test
+	public void shouldNotSameRandom() {
+		// 1. Random 한 걸 어떻게 증명하지 ?
+		Random.notSameRandom(4);
 	}
 
+	
 }
