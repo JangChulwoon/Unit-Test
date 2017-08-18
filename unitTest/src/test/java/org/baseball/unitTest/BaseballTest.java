@@ -21,7 +21,13 @@ public class BaseballTest {
 		// 2. 수를 입력받는 함수.
 		// 3. 확인하는 함수. 
 		
+		Baseball baseball = new Baseball();
 		
+		baseball.initGame();
+		do {
+			baseball.inputNumber();
+		}while(baseball.confirm());
+		baseball.printScore();
 	}
 
 }
