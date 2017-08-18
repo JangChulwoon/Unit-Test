@@ -18,5 +18,16 @@ public class BaseballTest {
 		}
 	}
 	
+	@Test
+	public void shouldCheckNumber() {
+		Game game = new Game();
+		try {
+			game.vaild("1a2");
+			Assert.fail();
+		}catch (IllegalArgumentException e) {
+			// TODO: handle exception
+		}
+	}
+	
 	
 }
