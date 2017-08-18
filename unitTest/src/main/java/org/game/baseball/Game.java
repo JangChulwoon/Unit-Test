@@ -1,7 +1,5 @@
 package org.game.baseball;
 
-import org.junit.internal.Throwables;
-
 public class Game {
 	public void vaild(String value) {
 		if (value == null) {
@@ -11,6 +9,10 @@ public class Game {
 			if (input < '0' || input > '9') {
 				throw new IllegalArgumentException();
 			}
+		}
+		if (value.charAt(0) == value.charAt(1) || value.charAt(0) == value.charAt(2)
+				|| value.charAt(1) == value.charAt(2)) {
+			throw new IllegalArgumentException();
 		}
 	}
 }
