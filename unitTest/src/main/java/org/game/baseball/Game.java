@@ -5,6 +5,9 @@ public class Game {
 	public int strike = 0;
 	
 	public boolean isSucess() {
+		if(ball == 0 && strike ==3) {
+			return true;
+		}
 		return false;
 	}
 }

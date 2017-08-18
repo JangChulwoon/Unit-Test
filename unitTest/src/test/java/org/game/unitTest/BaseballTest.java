@@ -30,6 +30,9 @@ public class BaseballTest {
 
 	@Test
 	public void endGame() {
+		game.strike = 3;
+		game.ball = 0;
+		
 		Assert.assertThat(game.isSucess(), is(true));
 		Assert.assertThat(game.strike, is(3));
 		Assert.assertThat(game.ball, is(0));
