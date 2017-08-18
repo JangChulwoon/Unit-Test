@@ -23,6 +23,11 @@ public class BaseballTest {
 	public void shouldCheckNumber() {
 		checkVaild("1a2");
 	}
+	
+	@Test
+	public void shouldCheckNotSame() {
+		checkVaild("112");
+	}
 
 	private void checkVaild(String input) {
 		try {
