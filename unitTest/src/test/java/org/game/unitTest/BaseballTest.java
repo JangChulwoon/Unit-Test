@@ -1,6 +1,7 @@
 package org.game.unitTest;
 
 import org.game.baseball.Game;
+import org.game.common.Vaild;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,27 +16,15 @@ public class BaseballTest {
 	}
 
 	@Test
-	public void shouldNullCheck() {
-		checkVaild(null);
-	}
-
-	@Test
-	public void shouldCheckNumber() {
-		checkVaild("1a2");
-	}
-	
-	@Test
-	public void shouldCheckNotSame() {
-		checkVaild("112");
-	}
-
-	private void checkVaild(String input) {
+	public void CheckVaild() {
 		try {
-			game.vaild(input);
+			Vaild.checkVaild(null);
+			Vaild.checkVaild("1a2");
+			Vaild.checkVaild("112");
 			Assert.fail();
-		} catch (IllegalArgumentException e) {
-			// TODO: handle exception
+		}catch (Exception e) {
 		}
 	}
+	
 
 }
