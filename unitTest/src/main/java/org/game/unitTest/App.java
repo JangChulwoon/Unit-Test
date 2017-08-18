@@ -1,4 +1,4 @@
-package org.baseball.unitTest;
+package org.game.unitTest;
 
 /**
  * Hello world!

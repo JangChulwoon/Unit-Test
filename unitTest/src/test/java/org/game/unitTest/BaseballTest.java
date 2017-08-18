@@ -1,5 +1,6 @@
-package org.baseball.unitTest;
+package org.game.unitTest;
 
+import org.game.baseball.Baseball;
 import org.junit.Test;
 
 public class BaseballTest {
@@ -20,13 +21,12 @@ public class BaseballTest {
 		// 1. 숫자를 생성하는 함수.
 		// 2. 수를 입력받는 함수.
 		// 3. 확인하는 함수. 
-		
 		Baseball baseball = new Baseball();
 		
 		baseball.initGame();
 		do {
 			baseball.inputNumber();
-		}while(baseball.confirm());
+		}while(!baseball.confirm());
 		baseball.printScore();
 	}
 
