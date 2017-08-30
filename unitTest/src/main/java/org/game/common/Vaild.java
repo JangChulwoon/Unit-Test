@@ -1,10 +1,26 @@
 package org.game.common;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.stream.Stream;
+
 public class Vaild {
-	public static void checkVaild(String input) throws IllegalArgumentException{
+	public static void checkVaild(String input) throws IllegalArgumentException {
 		vaild(input);
 	}
-	
+
+	public static boolean comfirmUniqueness(int[] numbers) {
+		int size  = numbers.length;
+		for (int i = 0; i < size; ++i) {
+			for (int j = i + 1; j < size; ++j) {
+				if (numbers[i] == numbers[j]) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
 	private static void vaild(String value) {
 		if (value == null) {
 			throw new IllegalArgumentException();
@@ -19,4 +35,5 @@ public class Vaild {
 			throw new IllegalArgumentException();
 		}
 	}
+
 }

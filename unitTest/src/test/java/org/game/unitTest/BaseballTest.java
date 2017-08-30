@@ -7,7 +7,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.assertThat;
+
+import java.lang.reflect.Array;
 
 public class BaseballTest {
 	Game game;
@@ -38,4 +41,22 @@ public class BaseballTest {
 		Assert.assertThat(game.ball, is(0));
 	}
 
+	@Test
+	public void proceedWithGame() {
+		game.strike = 2;
+		game.ball = 0;
+		
+		Assert.assertThat(game.isSucess(), is(false));
+		Assert.assertThat(game.strike, is(not(3)));
+	}
+	
+	@Test
+	public void checkUniqueNumber() {
+		int[] numbers = game.makeNumber();
+		
+		boolean uniqueFlag = Vaild.comfirmUniqueness(numbers);
+		
+		Assert.assertThat(uniqueFlag, is(true));
+		
+	}
 }

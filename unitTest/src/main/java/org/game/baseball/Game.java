@@ -10,4 +10,9 @@ public class Game {
 		}
 		return false;
 	}
+	
+	public int[] makeNumber() {
+		return new int[] {1,2,3,4};
+	}
+	
 }
